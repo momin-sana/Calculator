@@ -1,0 +1,51 @@
+.c-screen {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: stretch;
+    transition: all 0.5s linear;
+}
+
+.btn_history {
+    display: grid;
+    grid-template-columns: minmax(0px, 32px) repeat(1, 4fr);
+}
+
+button {
+    background-color: #031f0100;
+}
+
+.bi-backspace:hover {
+    padding-inline-end: 10px;
+}
+
+.bi-clock-history::before {
+    margin-right: 5px;
+}
+
+.c-history-answer {
+    background-color: var(--black--first);
+    padding: 0.2rem 0rem;
+    border-radius: 0.5rem;
+    color: var(--default-text-color);
+    font-weight: 300;
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+    text-align: end;
+}
+
+.c-answer {
+    display: inline-flex;
+    align-items: center;
+    flex-direction: row;
+    margin-bottom: 0.5rem;
+    font-size: 3rem;
+    color: var(--white);
+    font-weight: 900;
+    justify-content: flex-end;
+}
+
+
+/* .no-rv {
+    cursor: unset;
+} */

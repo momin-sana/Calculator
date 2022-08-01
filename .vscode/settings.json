@@ -1,0 +1,7 @@
+{
+    "reactSnippets.settings.prettierEnabled": true,
+    "eslint.alwaysShowStatus": false,
+    "css.styleSheets": [
+    
+    ]
+}
