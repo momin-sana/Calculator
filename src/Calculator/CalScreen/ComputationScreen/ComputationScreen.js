@@ -1,22 +1,19 @@
-import React, { useContext, useState } from "react";
+import React, { useContext } from "react";
+import { NumberContext } from "../../ContextProvider";
 import "./computationscreen.css";
-import { GetVal } from "../../Keypad/Keypad";
+
 
 export default function ComputationScreen() {
-    const operand = useContext(GetVal);
+    const { number } = useContext(NumberContext);
 
-    return ( <
-        div className = "ctc c-compute" >
-        <
-        GetVal.Consumer > { <
-            span > { operand ? operand : '0' }
-
-            <
-            /span>
-        }
+    console.log("number", number);
+    return (
 
         <
-        /GetVal.Consumer> <
+        div className = "ctc c-compute" > { " " } <
+        span > { number } < /span>{" "}
+
+        { " " } <
         /div>
     );
 }
