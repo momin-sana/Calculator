@@ -18,7 +18,7 @@
 }
 
 .container .calculator {
-    height: 80vh;
+    height: fit-content;
     width: fit-content;
     box-shadow: 0 2rem 4rem var(--shadow);
     background-color: var(--color-black);
