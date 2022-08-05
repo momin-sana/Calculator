@@ -1,9 +1,7 @@
-import React, { useState } from "react";
+import React from "react";
 import "./resultscreen.css";
 
-export default function ResultScreen() {
-    const [preAnswer, setPreAnswer] = useState("");
-    const [answer, setAnswer] = useState("0");
+export default function ResultScreen(props) {
     return ( <
         div className = "ctc c-screen" >
         <
@@ -25,8 +23,7 @@ export default function ResultScreen() {
         /div>{" "} <
         div className = "c-answer" >
         <
-        span > { /* {answer */ }
-        0 < /span>{" "} <
+        span > answer / result < /span>{" "} <
         /div>{" "} <
         /div>
     );
