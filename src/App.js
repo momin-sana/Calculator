@@ -1,6 +1,7 @@
 import "./App.css";
 import { ContextProvider } from "./Calculator/ContextProvider";
 import Calculator from "./Calculator/Calculator";
+// import FirstCalculator from "./FirstCalculator/FirstCalculator";
 
 function App() {
     return ( <
