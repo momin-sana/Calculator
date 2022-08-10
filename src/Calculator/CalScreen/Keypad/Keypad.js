@@ -1,129 +1,132 @@
-import React, { useContext, useState } from "react";
+import React, { useContext } from "react";
 import { NumberContext } from "../../ContextProvider";
 import "./keypad.css";
 
-export default function Keypad({ keyvalue }) {
+export default function Keypad({ value }) {
     const { handleCompValue } = useContext(NumberContext);
+    const { handleBackButton } = useContext(NumberContext);
+    const { doMath } = useContext(NumberContext);
+    const { handleSetCalcFunction } = useContext(NumberContext);
     console.log("handleCompValue", handleCompValue);
-
 
     return ( <
         div className = "c-grid" >
         <
         button type = "button"
         className = "top-btn span-two"
-        keyvalue = "ac"
+        value = { "ac" }
         onClick = {
-            () => handleCompValue(keyvalue) } >
-        ac { " " } <
-        /button>{" "} <
+            () => handleBackButton() } >
+        ac <
+        /button> <
         button type = "button"
         className = "top-btn "
-        keyvalue = "%"
+        value = { "%" }
         onClick = {
-            () => handleCompValue(keyvalue) } >
+            () => handleSetCalcFunction({ value }) } >
         %
         <
-        /button>{" "} <
+        /button> <
         button type = "button"
         className = "top-btn special "
-        keyvalue = "/"
+        value = { "/" }
         onClick = {
-            () => handleCompValue(keyvalue) } >
-        /{" "} <
-        /button>{" "} <
+            () => handleSetCalcFunction({ value }) } >
+        / <
+        /button> <
         button className = "normal"
-        keyvalue = { 7 }
+        Key = { 7 }
+        value = { 7 }
         onClick = {
-            () => handleCompValue(keyvalue = `${keyvalue}`) } >
-        7 { " " } <
-        /button>{" "} <
+            () => handleCompValue({ value }) } >
+        7 <
+        /button> <
         button className = "normal"
-        keyvalue = { 8 }
+        key = { 8 }
+        value = { 8 }
         onClick = {
-            () => handleCompValue(keyvalue) } >
-        8 { " " } <
-        /button>{" "} <
+            () => handleCompValue({ value }) } >
+        8 <
+        /button> <
         button className = "normal"
-        keyvalue = { 9 }
+        value = { 9 }
         onClick = {
-            () => handleCompValue(keyvalue) } >
-        9 { " " } <
-        /button>{" "} <
+            () => handleCompValue() } >
+        9 <
+        /button> <
         button className = "special"
-        keyvalue = "*"
+        value = { "*" }
         onClick = {
-            () => handleCompValue(keyvalue) } >
-        x { " " } <
-        /button>{" "} <
+            () => handleSetCalcFunction({ value }) } >
+        x <
+        /button> <
         button className = "normal"
-        keyvalue = { 4 }
+        value = { 4 }
         onClick = {
-            () => handleCompValue(keyvalue) } >
-        4 { " " } <
-        /button>{" "} <
+            () => handleCompValue(value) } >
+        4 <
+        /button> <
         button className = "normal"
-        keyvalue = { 5 }
+        value = { 5 }
         onClick = {
-            () => handleCompValue(keyvalue) } >
-        5 { " " } <
-        /button>{" "} <
+            () => handleCompValue(value) } >
+        5 <
+        /button> <
         button className = "normal"
-        keyvalue = { 6 }
+        value = { 6 }
         onClick = {
-            () => handleCompValue(keyvalue) } >
-        6 { " " } <
-        /button>{" "} <
+            () => handleCompValue(value) } >
+        6 <
+        /button> <
         button className = "special"
-        keyvalue = "-"
+        value = { "-" }
         onClick = {
-            () => handleCompValue(keyvalue) } >
+            () => handleSetCalcFunction({ value }) } >
         -
         <
-        /button>{" "} <
+        /button> <
         button className = "normal"
-        keyvalue = { 1 }
+        value = { 1 }
         onClick = {
-            () => handleCompValue(keyvalue) } >
-        1 { " " } <
-        /button>{" "} <
+            () => handleCompValue(value) } >
+        1 <
+        /button> <
         button className = "normal"
-        keyvalue = { 2 }
+        value = { 2 }
         onClick = {
-            () => handleCompValue(keyvalue) } >
-        2 { " " } <
-        /button>{" "} <
+            () => handleCompValue(value) } >
+        2 <
+        /button> <
         button className = "normal"
-        keyvalue = { 3 }
+        value = { 3 }
         onClick = {
-            () => handleCompValue(keyvalue) } >
-        3 { " " } <
-        /button>{" "} <
+            () => handleCompValue(value) } >
+        3 <
+        /button> <
         button className = "special"
-        keyvalue = "+"
+        value = { "+" }
         onClick = {
-            () => handleCompValue(keyvalue) } >
+            () => handleSetCalcFunction({ value }) } >
         +
         <
-        /button>{" "} <
+        /button> <
         button className = "span-two normal"
-        keyvalue = { 0 }
+        value = { 0 }
         onClick = {
-            () => handleCompValue(keyvalue) } >
-        0 { " " } <
-        /button>{" "} <
+            () => handleCompValue(value) } >
+        0 <
+        /button> <
         button className = "normal"
-        keyvalue = "."
+        value = { "." }
         onClick = {
-            () => handleCompValue(keyvalue) } >
-        . { " " } <
-        /button>{" "} <
+            () => handleCompValue(value) } >
+        . <
+        /button> <
         button className = "special"
-        keyvalue = "="
+        value = { "=" }
         onClick = {
-            () => handleCompValue(keyvalue) } >
-        = { " " } <
-        /button>{" "} <
+            () => doMath() } > = <
+        /button> <
         /div>
     );
 }
