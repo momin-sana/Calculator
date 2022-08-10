@@ -1,42 +1,52 @@
-import React, { createContext, useState } from "react";
-
+import React, { createContext, useEffect, useState } from "react";
 
 export const NumberContext = createContext();
 
 const ContextProvider = (props) => {
         const [number, setNumber] = useState("");
-        const [storedNumber, setStoredNumber] = useState('');
-        const [functionType, setFunctionType] = useState('');
+        const [storedNumber, setStoredNumber] = useState("");
+        // const [operand, setOperand] = useState("");
+        const [functionType, setFunctionType] = useState("");
 
-        const handleCompValue = (e) => {
-            try {
-                if (!number.includes(".") || e !== ".") {
-                    setNumber(`${(number + e).replace("[/^0+/]", "")}`);
-                }
-            } catch (error) {
-                e.preventDefault();
-                setNumber("");
+        const handleCompValue = () => {
+            // const number = e.target.number;
+
+            // if Dot(.) exists don't add again
+            if (!(storedNumber === "." || storedNumber.includes("."))) {
+                setNumber((storedNumber) => storedNumber + number);
             }
+            // set operaands inputs
+            setStoredNumber((storedNumber) => storedNumber + number);
+
+            // try {
+            //     if (!number.includes(".") || e !== ".") {
+            //         setNumber(`${(number + e).replace("[/^0+/]", "")}`);
+            //     }
+            // } catch (error) {
+            //     e.preventDefault();
+            //     setNumber("");
+            // }
         };
+
         const handleSetStoredValue = () => {
             setStoredNumber(number);
-            setNumber('');
+            setNumber("");
         };
 
         const handleClearValue = () => {
-            setNumber('');
-            setStoredNumber('');
-            setFunctionType('');
+            setNumber("");
+            setStoredNumber("");
+            setFunctionType("");
         };
 
         const handleBackButton = () => {
-            if (number !== '') {
+            if (number !== "") {
                 const deletedNumber = number.slice(0, number.length - 1);
                 setNumber(deletedNumber);
             }
         };
 
-        const handleSetCalcFunction = type => {
+        const handleSetCalcFunction = (type) => {
             if (number) {
                 setFunctionType(type);
                 handleSetStoredValue();
@@ -46,29 +56,59 @@ const ContextProvider = (props) => {
             }
         };
         const doMath = () => {
+                // const number = e.target.number;
+
+                if (number === "=") {
+                    if (storedNumber === "") return;
+                }
+
                 if (number && storedNumber) {
                     switch (functionType) {
-                        case '+':
-                            setStoredNumber(`${Math.round(`${(parseFloat(storedNumber) + parseFloat(number)) * 100}`) / 100}`);
+                        case "+":
+                            setStoredNumber(
+                                    `${
+              Math.round(
+                `${(parseFloat(storedNumber) + parseFloat(number)) * 100}`
+              ) / 100
+            }`
+          );
           break;
-        case '-':
-          setStoredNumber(`${Math.round(`${(parseFloat(storedNumber) - parseFloat(number)) * 1000}`) / 1000}`);
+        case "-":
+          setStoredNumber(
+            `${
+              Math.round(
+                `${(parseFloat(storedNumber) - parseFloat(number)) * 1000}`
+              ) / 1000
+            }`
+          );
           break;
-        case '/':
-          setStoredNumber(`${Math.round(`${(parseFloat(storedNumber) / parseFloat(number)) * 1000}`) / 1000}`);
+        case "/":
+          setStoredNumber(
+            `${
+              Math.round(
+                `${(parseFloat(storedNumber) / parseFloat(number)) * 1000}`
+              ) / 1000
+            }`
+          );
           break;
-        case '*':
-          setStoredNumber(`${Math.round(`${parseFloat(storedNumber) * parseFloat(number) * 1000}`) / 1000}`);
+        case "*":
+          setStoredNumber(
+            `${
+              Math.round(
+                `${parseFloat(storedNumber) * parseFloat(number) * 1000}`
+              ) / 1000
+            }`
+          );
           break;
         default:
           break;
       }
-      setNumber('');
+      setNumber("");
     }
   };
-  console.log("handleCompValue", handleCompValue);
+
   console.log("number", number);
-  console.log("props",props);
+  console.log("props", props);
   return (
     <NumberContext.Provider
       value={{
