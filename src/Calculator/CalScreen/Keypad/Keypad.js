@@ -17,8 +17,8 @@ export default function Keypad({ value }) {
         value = { "ac" }
         onClick = {
             () => handleBackButton() } >
-        ac <
-        /button> <
+        ac { " " } <
+        /button>{" "} <
         button type = "button"
         className = "top-btn "
         value = { "%" }
@@ -26,107 +26,107 @@ export default function Keypad({ value }) {
             () => handleSetCalcFunction({ value }) } >
         %
         <
-        /button> <
+        /button>{" "} <
         button type = "button"
         className = "top-btn special "
         value = { "/" }
         onClick = {
             () => handleSetCalcFunction({ value }) } >
-        / <
-        /button> <
+        /{" "} <
+        /button>{" "} <
         button className = "normal"
         Key = { 7 }
         value = { 7 }
         onClick = {
             () => handleCompValue({ value }) } >
-        7 <
-        /button> <
+        7 { " " } <
+        /button>{" "} <
         button className = "normal"
         key = { 8 }
         value = { 8 }
         onClick = {
             () => handleCompValue({ value }) } >
-        8 <
-        /button> <
+        8 { " " } <
+        /button>{" "} <
         button className = "normal"
         value = { 9 }
         onClick = {
             () => handleCompValue() } >
-        9 <
-        /button> <
+        9 { " " } <
+        /button>{" "} <
         button className = "special"
         value = { "*" }
         onClick = {
             () => handleSetCalcFunction({ value }) } >
-        x <
-        /button> <
+        x { " " } <
+        /button>{" "} <
         button className = "normal"
         value = { 4 }
         onClick = {
             () => handleCompValue(value) } >
-        4 <
-        /button> <
+        4 { " " } <
+        /button>{" "} <
         button className = "normal"
         value = { 5 }
         onClick = {
             () => handleCompValue(value) } >
-        5 <
-        /button> <
+        5 { " " } <
+        /button>{" "} <
         button className = "normal"
         value = { 6 }
         onClick = {
             () => handleCompValue(value) } >
-        6 <
-        /button> <
+        6 { " " } <
+        /button>{" "} <
         button className = "special"
         value = { "-" }
         onClick = {
             () => handleSetCalcFunction({ value }) } >
         -
         <
-        /button> <
+        /button>{" "} <
         button className = "normal"
         value = { 1 }
         onClick = {
             () => handleCompValue(value) } >
-        1 <
-        /button> <
+        1 { " " } <
+        /button>{" "} <
         button className = "normal"
         value = { 2 }
         onClick = {
             () => handleCompValue(value) } >
-        2 <
-        /button> <
+        2 { " " } <
+        /button>{" "} <
         button className = "normal"
         value = { 3 }
         onClick = {
             () => handleCompValue(value) } >
-        3 <
-        /button> <
+        3 { " " } <
+        /button>{" "} <
         button className = "special"
         value = { "+" }
         onClick = {
             () => handleSetCalcFunction({ value }) } >
         +
         <
-        /button> <
+        /button>{" "} <
         button className = "span-two normal"
         value = { 0 }
         onClick = {
             () => handleCompValue(value) } >
-        0 <
-        /button> <
+        0 { " " } <
+        /button>{" "} <
         button className = "normal"
         value = { "." }
         onClick = {
             () => handleCompValue(value) } >
-        . <
-        /button> <
+        . { " " } <
+        /button>{" "} <
         button className = "special"
         value = { "=" }
         onClick = {
-            () => doMath() } > = <
-        /button> <
+            () => doMath() } > { " " } = { " " } <
+        /button>{" "} <
         /div>
     );
 }

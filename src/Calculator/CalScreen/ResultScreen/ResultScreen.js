@@ -1,9 +1,7 @@
 import React from "react";
 import "./resultscreen.css";
 
-
 export default function ResultScreen() {
-
     return ( <
         div className = "ctc c-screen" >
         <

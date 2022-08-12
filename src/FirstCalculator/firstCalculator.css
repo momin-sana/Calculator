@@ -3,7 +3,7 @@
 @media only screen and (min-width: 320px) {
     .calculator,
     .c-wrapper {
-        border: 2px dotted red;
+        /* border: 12px dotted red; */
         width: 100%;
         font-size: medium;
         justify-content: space-evenly;
@@ -11,7 +11,7 @@
 }
 
 .container {
-    border: 2px solid black;
+    /* border: 2px solid black; */
     display: flex;
     align-items: center;
     justify-content: center;
@@ -22,7 +22,7 @@
 }
 
 .container .calculator {
-    border: 2px solid white;
+    /* border: 2px solid white; */
     height: fit-content;
     width: fit-content;
     box-shadow: 0 2rem 4rem var(--shadow);
@@ -31,7 +31,7 @@
 }
 
 .c-wrapper {
-    border: 2px solid red;
+    /* border: 2px solid red; */
     display: grid;
     grid-auto-rows: 10% 28% 11% 51%;
     height: 100%;
@@ -39,15 +39,12 @@
 }
 
 .ctc {
-    background-color: white;
+    /* background-color: white; */
     padding: 0.5rem 1rem;
 }
 
 .c-type {
-    /* display: grid; */
-    /* grid-template-columns: repeat(2, 1fr); */
     margin-top: 0.5rem;
-    /* overflow: hidden; */
 }
 
 h2 {
@@ -108,7 +105,9 @@ h2 {
 /* result screen */
 
 .c-screen {
-    background-color: aqua;
+    /* color: black; */
+    /* background-color: aqua; */
+    /* border: 2px solid olive; */
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -127,13 +126,20 @@ button {
 
 .bi-backspace:hover {
     padding-inline-end: 10px;
+    color: rgba(255, 255, 255, 0.2);
+    font-weight: 900;
 }
 
 .bi-clock-history::before {
     margin-right: 5px;
 }
 
+.bi-clock-history {
+    box-shadow: 0 2rem 4rem var(--shadow);
+}
+
 .c-history-answer {
+    background-color: black;
     background-color: var(--black--first);
     padding: 0.2rem 0rem;
     border-radius: 0.5rem;
@@ -145,6 +151,7 @@ button {
 }
 
 .c-answer {
+    /* border: 2px solid rebeccapurple; */
     display: inline-flex;
     align-items: center;
     flex-direction: row;
@@ -155,10 +162,9 @@ button {
     justify-content: flex-end;
 }
 
-
-/* .no-rv {
+.no-rv {
     cursor: unset;
-} */
+}
 
 
 /* keyypad screen */
@@ -172,7 +178,7 @@ button {
 .c-grid>button {
     cursor: pointer;
     text-align: center;
-    font-size: 1.2rem;
+    font-size: 1.8rem;
     font-weight: 500;
     transition: all 0.5s linear;
     text-transform: uppercase;
@@ -183,6 +189,8 @@ button {
 
 .c-grid>button:hover {
     background-color: rgba(255, 255, 255, 0.2) !important;
+    color: black;
+    font-weight: 800;
 }
 
 .c-grid>button.top-btn {

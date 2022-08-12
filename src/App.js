@@ -1,18 +1,15 @@
 import "./App.css";
-import { ContextProvider } from "./Calculator/ContextProvider";
-import Calculator from "./Calculator/Calculator";
-// import FirstCalculator from "./FirstCalculator/FirstCalculator";
+import React from "react";
+// import Calculator from "./Calculator/Calculator";
+import FirstCalculator from "../src/FirstCalculator/FirstCalculator";
 
 function App() {
     return ( <
-        ContextProvider >
-        <
         div className = "App" >
         <
-        Calculator / >
+        FirstCalculator / >
         <
-        /div> <
-        /ContextProvider>
+        /div>
     );
 }
 
