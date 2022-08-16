@@ -1,4 +1,4 @@
-# Raect Calculator
+# React Calculator
 
 A calculator app built with React.js using React Hooks. App is madeup with basic styling and Calculator operations.
 
