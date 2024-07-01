@@ -3,7 +3,7 @@
 A calculator app built with React.js using React Hooks. App is madeup with basic styling and Calculator operations.
 
 
-![Screenshot (50)](![image](https://github.com/momin-sana/Calculator/assets/92250920/31862ff4-d1bd-45bf-a39e-4b09e3187fe6)
+![Screenshot (50)]([![image](https://github.com/momin-sana/Calculator/assets/92250920/31862ff4-d1bd-45bf-a39e-4b09e3187fe6](https://user-images.githubusercontent.com/92250920/184344051-5826fde9-418f-4574-b8da-aed9384348a9.png))
 )
 
 ## Built With
