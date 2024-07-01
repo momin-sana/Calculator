@@ -13,7 +13,7 @@ A calculator app built with React.js using React Hooks. App is madeup with basic
 
 
 ### Live Demo
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Open[http://localhost:3000](https://calculator-sana-momin.netlify.app/) to view it in your browser.
 
 
 
