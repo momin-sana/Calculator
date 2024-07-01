@@ -3,7 +3,7 @@
 A calculator app built with React.js using React Hooks. App is madeup with basic styling and Calculator operations.
 
 
-![Screenshot (50)](https://user-images.githubusercontent.com/92250920/184344051-5826fde9-418f-4574-b8da-aed9384348a9.png)
+![Screenshot (50)]("C:\Users\sanam\OneDrive\Pictures\Screenshots\Screenshot 2024-07-01 112428.png")
 )
 
 ## Built With
